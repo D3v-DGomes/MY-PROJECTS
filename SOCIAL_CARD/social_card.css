@@ -1,0 +1,178 @@
+body {
+    font-family: Nunito, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    background-color: #e0e0e0;
+}
+
+.l-main {
+    background-color: #f1f1f1;
+    border-radius: 11px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.16);
+    height: 320px;
+    width: 560px;
+    padding: 0;
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+.c-button {
+    background-color: rgb(27, 89, 139);
+    color: #f1f1f1;
+    font-size: 12px;
+    border-radius: 25px;
+    padding: 10px 15px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 90ms ease-in;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: all 90ms ease-out;
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+}
+
+.c-card {
+    background-color: #f1f1f1;
+    border-radius: 11px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    flex: 0.6;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    left: 0;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+
+    .c-card_title {
+        font-weight: normal;
+        line-height: 1;
+        margin: 0;
+
+        .c-card_title-emphasis {
+            display: inline-block;
+            flex: 1;
+            font-size: 210%;
+            font-weight: bold;
+            width: 100%;
+        }
+    }
+
+    .c-card_explanation {
+        line-height: 1.6;
+        margin: 25px 0;
+    }
+
+    &.is-active {
+        clip-path: circle(100%);
+        transition-delay: 0s;
+        z-index: default;
+    }
+    &:not(.is-active) {
+        transition-delay: 1s;
+    }
+}
+
+
+.c-card-index {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.c-card-instagram {
+    background-color: #d62976;
+    clip-path: circle(0% at 600px 90%);
+
+    .c-button {
+        background-color: #5b51d8;
+        color: #e9e5df;
+    }
+    .c-button:hover {
+        background-color: #833ab4;
+    }
+}
+
+.c-card-linkedin {
+    background-color: #0e76a8;
+    clip-path: circle(0% at 660px 90%);
+
+    .c-button {
+        background-color: #e9e5df;
+        color: #333;
+    }
+    .c-button:hover {
+        background-color:rgba(233, 229, 223, 0.90);
+    }
+}
+
+.c-card-twitter {
+    background-color: #00acee;
+    clip-path: circle(0% at 725px 90%);
+
+    .c-button {
+        background-color: #e9e5df;
+        color: #333;
+    }
+
+    .c-button:hover {
+        background-color: rgba(233, 229, 223, 0.90);
+    }
+}
+
+
+.c-menu {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    list-style-type: none;
+    margin: -30px -85px;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+
+    .c-menu__item {
+        margin-left: 30px;
+        z-index: 200;
+    }
+
+    .c-menu__toggle {
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        height: 25px;
+        width: 25px;
+        padding: 0;
+        bottom: 0;
+        right: 0;
+        transition: all 10ms ease-in;
+    }
+    .c-menu__toggle:hover {
+        transform: translateY(1px);
+    }
+}
+
+.c-menu__item--index {
+    position: absolute;
+    right: -10px;
+    top: -300px;
+}
+
+.is-active {
+    fill: #f1f1f1;
+    pointer-events: none;
+}
